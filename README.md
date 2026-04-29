@@ -24,6 +24,20 @@ This project is a modular full-stack web application built using Flask and MySQL
 
 ---
 
+## Database Design
+
+This project includes a fully designed relational database for a vehicle rental system, created using MySQL Workbench.
+
+- `car_rental_final_model.mwb` → ER diagram and database design model  
+- `car_rental_forward_engineer_script.sql` → Generated schema creation script  
+- `CarRentalDatabaseExportFINAL.sql` → Full database export including schema and data  
+- `InsertQueries.sql` → Data insertion scripts for populating tables  
+- `SelectsAndJoinsUpdated.sql` → Complex SQL queries using joins and filtering  
+
+The database follows normalization principles and supports multi-entity relationships across customers, vehicles, rentals, and reservations.
+
+---
+
 ## Key Features
 - Modular backend architecture separating application logic and database operations
 - MySQL relational database integration
@@ -35,6 +49,7 @@ This project is a modular full-stack web application built using Flask and MySQL
 ---
 
 ## Testing
+
 The project includes multiple test scripts to validate system components:
 
 - Customer operations
@@ -45,25 +60,34 @@ The project includes multiple test scripts to validate system components:
 
 Run tests individually:
 
+```bash
 python test_customer.py
 python test_vehicle.py
 python test_reservation.py
 python test_rental.py
+```
 
 ---
 
-## How To Run
+## How to Run
 1. Install dependencies:
-   pip install flask mysql-connector-python
+```
+pip install flask mysql-connector-python
+```
 2. Configure the database:
-    Open db.py
-    Update MySQL username, password, and database name
-    Import the provided SQL schema into MySQL
-3. Run the application:
-    python app.py
-4. Open in browser:
-    http://localhost:5000
+- Open db.py
+- Update MySQL username, password, and database name
+- Import the provided SQL schema into MySQL
 
+3. Run the application:
+```
+python app.py
+```
+
+4. Open in browser:
+```
+http://localhost:5000
+```
 ---
 
 ## My Contributions
@@ -81,4 +105,3 @@ This project was developed in a team of 3.
 - Separation of concerns in application architecture
 - Writing and executing test scripts for validation
 - Managing relational data across multiple entities
-  
