@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Records</title>
+</head>
+<body>
+<h1>Rental Records</h1>
+<table border="1">
+<tr>
+    <th>Rental ID</th>
+    <th>Entry Date</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Total Cost</th>
+    <th>Rental Status</th>
+    <th>Reservation</th>
+    <th>Customer</th>
+    <th>Vehicle</th>
+    <th>Vehicle Year</th>
+    <th>License Plate Number</th>
+</tr>
+{% for r in rental %}
+<tr>
+    <td>{{ r.RentalID }}</td>
+    <td>{{ r.RentalEntryDate }}</td>
+    <td>{{ r.RentalStartDate }}</td>
+    <td>{{ r.RentalEndDate }}</td>
+    <td>{{ r.TotalCost }}</td>
+    <td>{{ r.RentalStatus }}</td>
+    <td>
+        {% if r.ReservationID %}
+            {{ r.ReservationEntryDate }}
+        {%  else %}
+            Walk In
+        {% endif %}
+    </td>
+    <td>{{ r.FirstName }} {{ r.LastName }}</td>
+    <td>{{ r.Make }} {{ r.Model }}</td>
+    <td>{{ r.Year }}</td>
+    <td>{{ r.LicensePlateNumber }}</td>
+
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

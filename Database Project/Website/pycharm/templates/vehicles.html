@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicles From Location</title>
+</head>
+<body>
+<h1>Vehicles From Rental Location ID {{ LocationID }}</h1>
+<table border="1">
+<tr>
+    <th>License Plate Number</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Rental Per Day</th>
+    <th>Vehicle Type</th>
+    <th>Vehicle Status</th>
+</tr>
+{% for v in vehicles %}
+<tr>
+    <td>{{ v.LicensePlateNumber }}</td>
+    <td>{{ v.Make }}</td>
+    <td>{{ v.Model }}</td>
+    <td>{{ v.Year }}</td>
+    <td>{{ v.RentalPerDay }}</td>
+    <td>{{ v.TypeName }}</td>
+    <td>{{ v.Availability }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

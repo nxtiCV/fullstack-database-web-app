@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maintenance</title>
+</head>
+<body>
+<h1>Maintenance</h1>
+<table border="1">
+<tr>
+    <th>Maintenance ID</th>
+    <th>Entry Date</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Service Description</th>
+    <th>Cost</th>
+    <th>Vehicle</th>
+    <th>Year</th>
+    <th>License Plate</th>
+    <th>Maintenance Status</th>
+</tr>
+{% for m in maintenance %}
+<tr>
+    <td>{{ m.MaintenanceID }}</td>
+    <td>{{ m.EntryDate }}</td>
+    <td>{{ m.StartDate }}</td>
+    <td>{{ m.EndDate }}</td>
+    <td>{{ m.ServiceDescription }}</td>
+    <td>{{ m.Cost }}</td>
+    <td>{{ m.Make }} {{ m.Model }}</td>
+    <td>{{ m.Year }}</td>
+    <td>{{ m.LicensePlateNumber }}</td>
+    <td>{{ m.MaintenanceStatusName }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

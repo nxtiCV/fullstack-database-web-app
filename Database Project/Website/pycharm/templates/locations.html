@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Locations</title>
+</head>
+<body>
+    <h1>Rental Locations</h1>
+    <table border="1">
+        <tr>
+            <th>LocationID</th>
+            <th>Name</th>
+            <th>Street</th>
+        </tr>
+        {% for loc in locations %}
+        <tr>
+            <td><a href="/vehicles?LocationID={{ loc.LocationID }}">{{ loc.LocationID }}</a></td>
+            <td>{{ loc.Name }}</td>
+            <td>{{ loc.Street }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

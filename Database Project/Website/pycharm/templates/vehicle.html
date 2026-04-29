@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicles</title>
+</head>
+<body>
+<h1>Vehicles</h1>
+<table border="1">
+<tr>
+    <th>Vehicle ID</th>
+    <th>License Plate Number</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Rental Per Day</th>
+    <th>Vehicle Type</th>
+    <th>Vehicle Status</th>
+    <th>Rental Location</th>
+</tr>
+{% for v in vehicle %}
+<tr>
+    <td>{{ v.VehicleID }}</td>
+    <td>{{ v.LicensePlateNumber }}</td>
+    <td>{{ v.Make }}</td>
+    <td>{{ v.Model }}</td>
+    <td>{{ v.Year }}</td>
+    <td>{{ v.RentalPerDay }}</td>
+    <td>{{ v.TypeName }}</td>
+    <td>{{ v.Availability }}</td>
+    <td>{{ v.Name }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

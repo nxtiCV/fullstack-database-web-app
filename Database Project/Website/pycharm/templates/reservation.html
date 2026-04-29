@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Records</title>
+</head>
+<body>
+<h1>Reservation</h1>
+<table border="1">
+<tr>
+    <th>Reservation ID</th>
+    <th>Entry Date</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Total Cost</th>
+    <th>Vehicle Type</th>
+    <th>Rental Location</th>
+    <th>Customer</th>
+    <th>Customer Email Address</th>
+    <th>Customer Phone Number</th>
+    <th>Customer State</th>
+    <th>Reservation Status</th>
+</tr>
+{% for r in reservation %}
+<tr>
+    <td>{{ r.ReservationID }}</td>
+    <td>{{ r.EntryDate }}</td>
+    <td>{{ r.StartDate }}</td>
+    <td>{{ r.EndDate }}</td>
+    <td>{{ r.TotalCost }}</td>
+    <td>{{ r.TypeName }}</td>
+    <td>{{ r.Name }}</td>
+    <td>{{ r.FirstName }} {{ r.LastName }}</td>
+    <td>{{ r.EmailAddress }}</td>
+    <td>{{ r.PhoneNumber }}</td>
+    <td>{{ r.State }}</td>
+    <td>{{ r.ReservationStatusName }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
